@@ -16,7 +16,10 @@ services:
       - laravel
       
   php74:
-    image: php:7.4-fpm-alpine
+#    image: php:7.4-fpm-alpine
+    build:
+      context: build74
+      dockerfile: Dockerfile
     container_name: php74
     hostname: homestead
     volumes: 
